@@ -1,0 +1,24 @@
+## authorization server setting
+security:
+  oauth2:
+    client:
+      client-id: acme
+      client-secret: acmesecret
+      scope: read,write
+      auto-approve-scopes: '.*'
+
+github:
+  client:
+    clientId: bb2e924b5c9698e16a08
+    clientSecret: 79e8f165df00fa06b65908491897e10197d0cf9f
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://api.github.com/user
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+server:
+  port:  8000
